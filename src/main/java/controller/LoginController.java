@@ -32,7 +32,7 @@ public class LoginController extends HttpServlet {
         System.out.println("Username: " + userEmail + ", Password: " + userPass + ", UserType: " + userType);
         
         // Call the login service class
-        loginDTO = new LoginDTO(userType, userEmail, userPass);
+        loginDTO = new LoginDto(userType, userEmail, userPass);
         String responseBody = loginService.validateUser(loginDTO);
         
         HttpSession session = request.getSession();
